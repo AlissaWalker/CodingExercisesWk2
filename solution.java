@@ -9,15 +9,15 @@ public class solution {
 
   void soln2() {
     // and put your code here.
-    for (int i = 100; i <= 5; i -= 5) {
+    for (int i = 100; i >= 5; i -= 5) {
     }
   }
 
     void soln3 () {
       // Sum on  solutions
-      int sum = 9;
-      for (int i = 10; i <= 17; i++) {
-
+      int sum = 0;
+      for (int i = 9; i <= 17; i++) {
+        sum= sum + i;
       }
       System.out.print(sum);
     }
@@ -25,7 +25,7 @@ public class solution {
     void soln4 () {
       // and put your code here.
       int smallest = a[0];
-      for (int x = 1; x < a.lenght; x++) {
+      for (int x = 1; x < a.length; x++) {
         if (a[x] < smallest) ;
         smallest = a[x];
       }
@@ -35,7 +35,7 @@ public class solution {
     void soln5 () {
       // and put your code here.
       int largest = a[0];
-      for (int x = 1; x < a.lenght; x++) {
+      for (int x = 1; x < a.length; x++) {
         if (a[x] < largest) ;
         largest = a[x];
       }
@@ -165,19 +165,50 @@ public class solution {
 
     void soln17 () {
       // and put your code here.
+  //a while loop that turns on heat
+      //thermo.getTemp is a class we have to create
+      String hvac=""; //
 
+      while(thermo.getTemp()< 72.0){    //class is red because theres no thermo class
+          hvac= " HeaterOn";
+      }
+      if(thermo.getTemp()> 76.0){   //do if down here because everthing in while has to be true
+        hvac ="AC On";
+      }
     }
 
     void soln18 () {
       // and put your code here.
+      //value is array's name
+      double [] values = {0.0,3.14}; //need {}  to instantiate array
+
+        for(int i=0; i< values.length; i++) {
+            if(value[i]> Math.PI ){
+              System.out.println(values[i]); //this prints the value of index prints # @ index
+              System.out.println(i); // this prints index
+            }
+          //after loops check for # being greater than pi
+          //Math.PI ---> the # pi
+        }
+
     }
 
-    void soln19 () {
+    void soln19 ( Object [] objects ) {
       // and put your code here.
+      Integer sum = 0;  //Integer has to be capital
+      for(int i =0;i< objects.length; i++){
+        Integer value= Xaction.getValue(objects[i]); // sent the value to an int and calls it from the XAction class
+        if(value != null){ //if the value doesnt = null
+          sum += value; //sum = sum + value
+        }
+
+      }
+     System.out.println(sum);  //prints sum
     }
 
     void soln20 () {
       // and put your code here.
+      // 1 for loop
     }
 
     void soln21 () {
